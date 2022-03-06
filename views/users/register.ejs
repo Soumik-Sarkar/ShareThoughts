@@ -1,0 +1,43 @@
+<% layout('layout/boilerplateAuth') %> 
+
+<div class="d-flex justify-content-center align-items-center mb-3">
+            <div class="card text-white border-0 shadow" style="width: 25rem;">
+                <img src="/images/banner.png" alt="" class="card-img-top" />
+                <div class="card-body bg-black" >
+                    <h5 class="card-title robsl mb-3">Register</h5>
+                    <form action="/register" method="POST" class="validated-form mb-4" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label rob size-2" for="name">Name</label>
+                            <input class="form-control" type="text" id="name" name="name" required autofocus>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3"> 
+                            <label class="form-label rob size-2" for="username">Username</label>
+                            <input class="form-control" type="text" id="username" name="username" required >
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label rob size-2" for="email">Email</label>
+                            <input class="form-control" type="email" id="email" name="email" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label rob size-2" for="password">Password</label>
+                            <input class="form-control" type="password" id="password" name="password" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <button class="btn btn-success btn-block me-3">Register</button>
+                        <a class="d-inline card-link btn btn-outline-success me-3" href="/login">Login</a>
+                    </form>
+                    <a class="card-link btn btn-secondary me-3" href="/posts">Continue as Guest &rarr;</a>
+                </div>
+            </div>
+</div>

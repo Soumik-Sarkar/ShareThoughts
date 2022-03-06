@@ -1,0 +1,30 @@
+<nav class="navbar border-bottom border-light navbar-expand-lg navbar-dark bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand  me-3" href="/posts"><img src="/images/Logo.png" alt="" height="50px" widht="300px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav">
+          <a class="nav-link robsl size-1 me-3" href="/posts" >Home</a>
+          <% if(currentUser){ %> 
+          <a class="nav-link robsl size-1 me-3" href="/posts/compose">New Post</a>
+          <a class="nav-link robsl size-1 me-3" href="/posts/user">My Post</a>
+          <a class="nav-link robsl size-1 me-3" href="/account">My Account</a>
+          <% } %> 
+      </div>
+      <div class="navbar-nav ms-auto">
+        <% if(!currentUser){ %> 
+          <a class="nav-link robsl size-1 me-3"  href="/login">LogIn</a>
+          <a class="nav-link robsl size-1 me-3"  href="/register">Register</a>
+          <% }else{ %> 
+          <a class="nav-link robsl size-1 me-3"  href="/logout">LogOut</a>
+          <% } %> 
+          <form class="d-flex px-3" action="/posts" method="get">
+            <input class="form-control me-2 robsl" type="search" placeholder="Search By Post Title" aria-label="Search" name="search">
+            <button class="btn btn-outline-light robsl" type="submit">Search</button>
+          </form>
+      </div>
+    </div>
+  </div>
+</nav>

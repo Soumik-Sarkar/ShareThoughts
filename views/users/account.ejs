@@ -1,0 +1,21 @@
+<% layout('layout/boilerplate') %> 
+
+<div class="d-flex justify-content-center align-items-center mt-3">
+            <div class="card bg-dark text-white border-secondary shadow" style="width: 22rem;">
+                <div class="card-body">
+                    <h2 class="card-title mb-3 robsl">My Account</h2>
+                        <div class="mb-3">
+                            <label class="form-label h5 mb-3 rob" for="name">Name</label>
+                            <input class="form-control" type="text" value="<%= currentUser.name %>"  disabled readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label h5 mb-3 rob" for="username">Username</label>
+                            <input class="form-control" type="text" value="<%= currentUser.username %>"  disabled readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label h5 mb-3 rob" for="email">Email</label>
+                            <input class="form-control" type="text" value="<%= currentUser.email %>"  disabled readonly>
+                        </div>
+                </div>
+            </div>
+</div>

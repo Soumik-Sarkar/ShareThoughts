@@ -1,0 +1,22 @@
+
+<% layout('layout/boilerplate') %>
+    <div class="d-flex justify-content-center align-items-center my-3">
+              <div class="card bg-dark text-white border-secondary shadow">
+                  <div class="card-body">
+                      <h1 class="card-title mb-3 robsl">Compose</h1>
+                      <form class="" action="/posts" method="post">
+                          <div class="mb-4">
+                            <label class="h5 mb-2 rob size-2" for="title" >Title</label>
+                            <input class="form-control" type="text" name="post[title]" id="title">
+                          </div>
+  
+                          <div class="mb-4">
+                            <label class="h5 mb-2 rob size-2" for="content">Post</label>
+                            <textarea class="form-control" name="post[content]" id="content" rows="10" cols="50"></textarea>
+                          </div>
+                          <button class="btn btn-primary" type="submit" name="button">Publish</button>
+                      </form>
+                      
+                  </div>
+              </div>
+  </div>

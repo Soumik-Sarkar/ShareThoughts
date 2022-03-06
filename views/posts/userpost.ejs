@@ -1,0 +1,23 @@
+<% layout('layout/boilerplate') %>
+  <% let hasPost = false %> 
+  <% posts.forEach(function(post){ %>
+    <% if(post.author.equals(currentUser._id)) { hasPost = true; %> 
+    <div class="card bg-dark text-white border-secondary shadow mb-3">
+      <h4 class="card-header robsl size-2"><%=post.title%></h4>
+      <div class="card-body">
+        <p class="card-text">
+          <% if(post.content.length <=400) { %>
+            <%=post.content%>
+              <% }else{ %>
+                <%=post.content.substring(0,400) + " ......." %>
+                  <% } %>
+        </p>
+        <a href="/posts/<%= post._id %> " class="btn btn-small btn-primary mt-3">View Comment &rarr;</a>
+      </div>
+    </div>
+    <% } %> 
+    <% }) %>
+
+    <% if(hasPost == false) { %> 
+      <h3 class="text-center text-white display-5 robsl">No Post Available </h3>
+      <% } %> 

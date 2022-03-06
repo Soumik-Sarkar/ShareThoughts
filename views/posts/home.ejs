@@ -1,0 +1,20 @@
+<% layout('layout/boilerplate') %>
+
+  <% posts.forEach(function(post){ %>
+    <div class="card border-secondary bg-dark text-white mb-3">
+      <h4 class="card-header robsl"><%=post.title%></h4>
+      <div class="card-body">
+        <h6 class="card-title rob mb-3">
+          By: <%= post.author.name %> 
+        </h6>
+        <p class="card-text">
+          <% if(post.content.length <=400) { %>
+            <%=post.content%>
+              <% }else{ %>
+                <%=post.content.substring(0,400) + " ......." %>
+                  <% } %>
+        </p>
+        <a href="/posts/<%= post._id %> " class="btn btn-small btn-primary">Write Comment &rarr;</a>
+      </div>
+    </div>
+    <% }) %>

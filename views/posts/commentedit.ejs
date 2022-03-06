@@ -1,0 +1,16 @@
+<% layout('layout/boilerplate') %>
+
+  <div class="d-flex justify-content-center align-items-center my-3">
+    <div class="card bg-dark text-white border-secondary shadow">
+        <div class="card-body">
+            <h2 class="card-title mb-3 robsl">Edit</h2>
+            <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=PUT " method="post" class="mb-3">
+                <div class="mb-4">
+                  <label class="h5 mb-2 rob size-2 mb-3" for="body">Comment</label>
+                  <textarea class="form-control" name="comment[body]" id="body" cols="50" rows="6" required><%= comment.body %> </textarea>
+                </div>
+                <button class="btn btn-primary" type="submit" name="button">Edit Comment</button>
+            </form> 
+        </div>
+    </div>
+  </div>
