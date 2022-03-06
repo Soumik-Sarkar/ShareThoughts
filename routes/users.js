@@ -19,7 +19,7 @@ router.post('/register',alreadyLoggedIn, catchAsync(async(req,res,next)=>{
             if(err){
                 return next(err);
             }
-            req.flash('success', 'Welcome to Connect' );
+            req.flash('success', 'Welcome to Share Thoughts' );
             res.redirect('/posts');
         });
     }catch(e){
